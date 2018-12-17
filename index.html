@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ambilight JS</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="room">
+  <div class="tv">
+    <div class="body" id="body">
+      <div class="tv_brand"></div>
+    <div class="inner">
+      <video id="flux" width="1280" height="720" src="https://cdn1.kinogo.by/movies/9ffd63911b3e23791df6a58438b1d63ab60843bd/0701ff15f6e4397dfcb4c8c7bce83e4a:2018121817/480.mp4" controls></video>
+    </div>
+    </div>
+    
+    <div class="glow">
+      <canvas id="ambitop" width="600" height="10" class="glow_item glow_top"></canvas>
+      <canvas id="ambibottom" height="10" width="600" class="glow_item glow_bottom"></canvas>
+      <canvas id="ambileft" width="10" height="338" class="glow_item glow_left"></canvas>
+      <canvas id="ambiright" width="10" height="338" class="glow_item glow_right"></canvas>
+    </div>
+  </div>
+</div>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

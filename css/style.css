@@ -1,0 +1,97 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.room {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #000;
+}
+
+.tv {
+  width: 1200px;
+  position: relative;
+}
+.tv .body {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  box-shadow: 0 0 0 8px #111;
+}
+.tv_brand {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  color: white;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+  font-size: 6px;
+  font-weight: bold;
+  padding: .25em;
+}
+.tv .inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+}
+.tv .inner #flux {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tv .glow {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: brightness(165%) blur(85px);
+          filter: brightness(165%) blur(85px);
+}
+.tv .glow_item {
+  position: absolute;
+  height: 10px;
+}
+.tv .glow_top, .tv .glow_bottom {
+  height: 10px;
+  left: 0;
+  width: 100%;
+  -webkit-transform: scaleY(15);
+          transform: scaleY(15);
+}
+.tv .glow_left, .tv .glow_right {
+  width: 10px;
+  height: 100%;
+  -webkit-transform: scaleX(15);
+          transform: scaleX(15);
+}
+.tv .glow_top {
+  top: -10px;
+}
+.tv .glow_bottom {
+  bottom: -10px;
+}
+.tv .glow_left {
+  left: -10px;
+}
+.tv .glow_right {
+  right: -10px;
+}
+.tv::before {
+  content: '';
+  display: block;
+  padding-top: 56.25%;
+  box-shadow: 0 0 0 1px black;
+}
